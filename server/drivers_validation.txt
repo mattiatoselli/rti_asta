@@ -1,0 +1,27 @@
+{
+   $jsonSchema: {
+      bsonType: "object",
+      required: [ "name", "isOnSale", "price", "team"],
+      properties: {
+         name: {
+            bsonType: "string",
+            description: "must be a string"
+         },
+         price: {
+            bsonType: "int",
+            minimum: 0,
+            maximum: 200,
+            exclusiveMaximum: false,
+            description: "must be an integer in [ 0, 200 ]"
+         },
+         isOnSale: {
+            bsonType: "bool",
+         },
+         team: {
+            bsonType: "string",
+            enum: [ "Volanti ITR", "Racing Team Italia", "My Subito Casa", "A24", "Prandelli", "3DRAP", "Rookies" ],
+            description: "must be a value like 'Volanti ITR', 'Racing Team Italia', 'My Subito Casa', 'A24', 'Prandelli', '3DRAP', 'Rookies'"
+         }
+      }
+   }
+}
