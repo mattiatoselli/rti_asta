@@ -73,6 +73,7 @@ router.patch("/:id", async(req,res)=>{
         res.status(500).send(err.message);
     }
 });
+
 //delete driver
 router.delete("/:id", async(req,res)=>{
     try {
@@ -86,8 +87,8 @@ router.delete("/:id", async(req,res)=>{
 
 async function loadDriversCollection() {
     const client = await mongodb.MongoClient.connect("mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false",
-    {useNewUrlParser: true},
-    {useUnifiedTopology: true}
+        { useNewUrlParser: true },
+        { useUnifiedTopology: true }
     );
     return client.db("racing_team_italia").collection("drivers");
 }
