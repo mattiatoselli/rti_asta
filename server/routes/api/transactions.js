@@ -1,5 +1,6 @@
 const express = require("express");
-const mongodb = require("mongodb")
+const mongodb = require("mongodb");
+const axios = require('axios')
 const router = express.Router();
 var ObjectId = require('mongodb').ObjectId;
 
@@ -21,6 +22,15 @@ router.get("/:id", async (req,res)=>{
 //create transaction
 router.post("/", async(req, res)=>{
     const transactions = await loadTransactionsCollection();
+    axios.get("http://localhost:3000/api/drivers/"+req.body.id)
+    .then(res => {
+        var driver = res.data;
+        console.log(driver);
+    })
+    .catch(error => {
+        console.log(error);
+        res.status(500).send();
+    });
     await transactions.insertOne({
         driver : req.body.driver,
         from : req.body.from,
@@ -29,6 +39,23 @@ router.post("/", async(req, res)=>{
         percentage : req.body.percentage,
         createdAt : new Date()
     });
+    if(req.body.from != req.body.to) {
+        axios.patch('http://localhost:3000/api/drivers/602060272b28bd3b98f935b3', {
+            name : req.body.driver,
+            team: req.body.to,
+            price : 0,
+            isOnSale : false
+        })
+        .then(res => {
+            console.log("ok");
+            //console.log(`statusCode: ${res.statusCode}`)
+            //console.log(res)
+        })
+        .catch(error => {
+            console.log("nope");
+            console.error(error)
+        })
+    }
     res.status(201).send();
 });
 
