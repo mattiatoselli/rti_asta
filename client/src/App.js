@@ -1,4 +1,4 @@
-import './App.scss';
+//import './App.scss';
 import Navbar from "./Navbar"
 const title = "Racing Team Italia: asta piloti 2021-2022";
 
