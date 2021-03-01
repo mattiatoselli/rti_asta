@@ -1,7 +1,7 @@
 
-// import React from 'react';
+import React from 'react';
 
-function Navbar() {
+export const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
@@ -43,5 +43,3 @@ function Navbar() {
     </div>
   );
 }
-
-export default Navbar;

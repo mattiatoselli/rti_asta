@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './App.scss';
-import Navbar from './components/Navbar';
+import { Navbar } from './components/Navbar';
 
 type Props = {
   title: string;
