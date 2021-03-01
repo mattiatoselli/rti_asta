@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
+import { App } from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App title="Racing Team Italia: asta piloti 2021-2022" />
   </React.StrictMode>,
   document.getElementById('root')
 );
