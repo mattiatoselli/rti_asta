@@ -1,7 +1,11 @@
 
+import { Button } from '@material-ui/core';
 import React from 'react';
 
 export const Navbar = () => {
+
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
@@ -9,7 +13,7 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <button className="btn btn-danger nav link active button" data-bs-toggle="modal" data-bs-target="#exampleModal">Inserisci pilota</button>
+                <Button variant="contained" color="primary" onClick={() => {console.log('foo');}}>Inserisci pilota</Button>
               </li>
               <li className="nav-item">
                 <button className="btn btn-danger nav link active button" data-bs-toggle="modal" data-bs-target="#exampleModal">Vendi pilota</button>

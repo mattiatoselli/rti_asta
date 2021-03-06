@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+$roboto_font: 'Roboto', sans-serif;
+
+$h1: 60px;
+$h2: 50px;
+$h3: 40px;
+$h4: 30px;
+$h5: 20px;
+$h6: 10px;
+$p: 16px;
+
+h1 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h1;
+}
+
+h2 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h2;
+}
+
+h3 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h3;
+}
+
+h4 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h4;
+}
+
+h5 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h5;
+}
+
+h6 {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $h6;
+}
+
+p {
+	font-family: $roboto_font;
+	text-rendering: optimizeLegibility;
+	font-size: $p;
+}
